@@ -1,0 +1,239 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+body{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+img{
+  border-style: none;
+  max-width: 100%;
+}
+
+      /* Navbar */
+nav{
+  background: radial-gradient(yellow, orange);
+  height: 100px;
+  width: 100%;
+}
+#enlace-logo{
+  position: absolute;
+  padding: 15px 3rem;
+}
+.img-logo-grooming{
+  width: 70px;
+  border-radius: 50%;
+}
+#lista-menu{
+  color: black;
+  float: right;
+  margin-right: 35px;
+}
+.li-menu, .active{
+  display: inline-block;
+  line-height: 100px;
+  font-size: 18px;
+  padding: 0 18px;
+  list-style: none;
+  text-transform: uppercase;
+}
+.a-li-menu{
+  text-decoration-line: none;
+  list-style: none;
+  text-decoration-style: none;
+}
+#btn-caja-chequeo, #caja-chequeo{
+  display: none;
+}
+
+      /* section hero */
+#section-hero{
+  background: radial-gradient(rgba(238, 146, 7, 0.555), white);
+}
+.titulo{
+  text-align: center;
+  margin: .5rem 0;
+}
+#contenedor-img-posible{
+  text-align: center;
+  width: 100%;
+  margin:3rem 0;
+}
+#img-posible{
+  width: 30rem;
+}
+
+      /* section-nosotros */
+#section-nosotros{
+  background-image: url(./img-laura/mascotas-fondo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: calc(70vh + 30rem);
+  text-align: center;
+}
+#area-nosotros{
+  color: orange;
+  text-shadow: red 0 -2px;
+  font-size: 2.5rem;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 3.5rem 0 1rem 0;
+  padding: 3.5rem 0 1rem 0;
+}
+#v-grooming-titulo{
+  font-family: 'Handlee', cursive;
+  font-size: 3rem;
+  color: orange;
+  text-shadow: rgb(251, 255, 0) 0 -2px;
+}
+#strong-h-tres{
+  font-weight: 900;
+}
+#p-area{
+  color: orange;
+  text-shadow: red 0 -2px;
+  text-align: center;
+  font-size: 2rem;
+  width: 50%;
+  margin: auto;
+}
+
+      /* Section Clientes */
+#section-clientes{
+  background: linear-gradient(white, yellow, orange, brown);
+}
+#titulo-clientes{
+  text-align: center;
+  color: rgb(129, 94, 29);
+  font-family: sans-serif;
+  margin-top: 7%;
+}
+#contenedor-galeria{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 95%;
+  margin: auto;
+}
+.img-galeria{
+  padding: 1rem;
+  max-height: 100%;
+  min-height: 100%;
+  border-radius: 10%;
+}
+
+      /* Section Footer */
+footer{
+  background: brown;
+}
+#section-footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: radial-gradient(rgba(255, 255, 0, 0.671), rgba(255, 166, 0, 0.767));
+  text-align: center;
+  border: 10px solid brown;
+  border-radius: 30px;
+  height: 30%;
+  padding: 2rem;
+  padding-bottom: -5px;
+}
+#section-footer a img{
+  width: 13%;
+  min-width: 1.5rem;
+  border-radius: 50%;
+}
+#section-footer a i{
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+}
+#telefonos{
+  grid-column: 1/4;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  text-align: center;
+}
+#telefonos h4{
+  grid-column: 1/5;
+}
+#tele-uno{
+  grid-column: 1/3;
+}
+#tele-dos{
+  grid-column: 3/5;
+}
+h6{
+  grid-column: 3/5;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/* Whatsapp */
+#btn-whatsapp{
+  position: fixed;
+  text-decoration: none;
+  width: 55px;
+  top: 75vh;
+  left: calc(100% - 60px);
+}
+.bi-whatsapp{
+  font-size: 3rem;
+  color: rgb(19, 152, 9);
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+      /* media */
+@media (max-width: 767px){
+  #btn-caja-chequeo{
+    display: inline-block;
+    margin-left: 85%;
+    font-size: 2.5rem;
+    color: orange;
+    line-height: 100px;
+  }
+  #enlace-logo{
+    display: none;
+  }
+  #lista-menu{
+    float: none;
+    text-align: center;
+    background: fixed orange;
+    height: calc(100vh - 100px);
+    width: 100%;
+    margin-left: -100%;
+    transition: 1s;
+    position: absolute;
+    z-index: 100;
+  }
+  .li-menu, .active{
+    display: block;
+  }
+  #caja-chequeo:checked ~ #lista-menu {
+    position: absolute;
+    z-index: 100;
+    margin-left: 0;
+    transition: 1s;
+  }
+  #contenedor-galeria{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 650px){
+  #p-area{
+    width: 80%;
+  }
+}
+@media (max-width: 500px){
+  #area-nosotros, #p-area{
+    font-size: 1.5rem;
+  }
+  #contenedor-galeria{
+    grid-template-columns: 1fr;
+  }
+}
+  
